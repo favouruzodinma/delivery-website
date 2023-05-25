@@ -306,14 +306,14 @@
             <div class="count-box">
               <i class="bi bi-globe"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="6" class="purecounter"></span>
-                <p>Our Location</p>
+                <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="6" class="purecounter" style="color: #151b4e; font-weight: 600;"></span>
+                <p style="color: #151b4e;">Our Location</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box card">
+            <div class="count-box ">
               <i class="bi bi-gift" style="color: #ee6c20;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="52100" data-purecounter-duration="6" class="purecounter" style="color: #151b4e; font-weight: 600;"></span>
@@ -323,7 +323,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="count-box card">
+            <div class="count-box ">
               <i class="bi bi-headset" style="color: #15be56;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="6" class="purecounter" style="color: #151b4e;"></span>
@@ -336,8 +336,8 @@
             <div class="count-box">
               <i class="bi bi-people" style="color: #bb0852;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="6" class="purecounter"></span>
-                <p>Hard Working Staffs</p>
+                <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="6" class="purecounter" style="color: #151b4e;"></span>
+                <p style="color: #151b4e;">Hard Working Staffs</p>
               </div>
             </div>
           </div>
