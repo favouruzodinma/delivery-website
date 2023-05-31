@@ -94,28 +94,28 @@
                                     <a href="manage-goods.php">Manage Goods</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=shipped">Shipped</a>
+                                    <a href="manage-goods.php?status=Shipped">Shipped</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=in_transit">In-transit</a>
+                                    <a href="manage-goods.php?status=In transit">In-transit</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=out_for_delivery">Out For Delivery</a>
+                                    <a href="manage-goods.php?status=Out for delivery">Out For Delivery</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=arrived_at_destination">Arrived at Destination</a>
+                                    <a href="manage-goods.php?status=Arrived at destination">Arrived at Destination</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=ready_to_pick_up">Ready For PickUp</a>
+                                    <a href="manage-goods.php?status=Ready to pickup">Ready For PickUp</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=picked_up">Picked Up</a>
+                                    <a href="manage-goods.php?status=Picked up">Picked Up</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=delivered">Delivered</a>
+                                    <a href="manage-goods.php?status=Delivered">Delivered</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=unsuccessfull_delivery">Unsuccessfull Delivery Attempt</a>
+                                    <a href="manage-goods.php?status=Unsuccessfull delivery">Unsuccessfull Delivery Attempt</a>
                                 </li>
                               
                             </ul>

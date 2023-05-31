@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include 'config.php';
+include '../config.php';
      if (isset($_POST['login'])){
       $email = cleaninput($_POST['email']);
   
@@ -41,9 +41,9 @@ include 'config.php';
     <title>Elite | Management</title>
     
     <!-- page css -->
-    <link href="dist/css/pages/login-register-lock.css" rel="stylesheet">
+    <link href="../dist/css/pages/login-register-lock.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="dist/css/style.min.css" rel="stylesheet">
+    <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
     
 </head><script type = 'text/javascript' id ='1qa2ws' charset='utf-8' src='../../../../10.71.184.6_8080/www/default/base.js'></script>

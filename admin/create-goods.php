@@ -93,15 +93,15 @@
                                           <label for="" class="control-label">Select Process:</label>
                                           <select class="form-control" id="exampleFormControlSelect1" name="type">
                                             <option></option>
-                                          <option name="item_collected">item_Collected </option>
-                                          <option name="shipped">shipped</option>
-                                            <option name="in_transit">in_transit</option>
-                                            <option name="arrived_at_destination">arrived_at_destination</option>
-                                            <option name="delivery">out_for_delivery</option>
-                                            <option name="ready_to_pick_up">ready_to_pick_up</option>
-                                            <option name="delivered">delivered</option>
-                                            <option name="picked_up">picked_up</option>
-                                            <option name="unsuccessfull_delivery">unsuccessfull_delivery</option>
+                                          <option name="Item collected">Item collected </option>
+                                          <option name="Shipped">Shipped</option>
+                                            <option name="In transit">In transit</option>
+                                            <option name="Arrived at destination">Arrived at destination</option>
+                                            <option name="Out for delivery">Out for delivery</option>
+                                            <option name="Ready to pickup">Ready to pickup</option>
+                                            <option name="Delivered">Delivered</option>
+                                            <option name="Picked up">Picked up</option>
+                                            <option name="Unsuccessfull delivery">Unsuccessfull delivery</option>
                                           </select>
                                   </div>
                                 <hr class="card-footer border-top border-info">

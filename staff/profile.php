@@ -10,8 +10,8 @@
                     </div>
                 </div> 
         <?php 
-        $userid = $_SESSION['userid'];
-        $sql = $conn->query("SELECT * FROM dlogin  WHERE userid='$userid' ");
+        $branch_id = $_SESSION['branch_id'];
+        $sql = $conn->query("SELECT * FROM staffs WHERE branch_id='$branch_id' ");
         if($sql->num_rows>0){
         while($row=$sql->fetch_assoc()){  
         
@@ -25,7 +25,7 @@
                     </div>
                     <div class="card-body">
                         <center class="m-t-30"> 
-                            <img src="./assets/images/users/4.jpg" class="img-circle" width="150" />
+                            <img src="./assets/images/users/5.jpg" class="img-circle" width="150" />
                             <h4 class="card-title m-t-10"><?php echo $row['flname']; ?></h4>
                             <h6 class="card-subtitle">Status <span class='badge badge-pill badge-success'><?php echo $row['status']; ?> </span></h6>
                             
@@ -47,7 +47,7 @@
     </div>
 </div>
 <?php
-  include ('sidebar.php');
+  include ('../sidebar.php');
   include ('scripts.php');
   include ('footer.php');
 ?>

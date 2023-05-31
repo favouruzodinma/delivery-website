@@ -1,6 +1,7 @@
 <?php
   include ('header.php');
   include ('navbar.php');
+
 ?>
         <div class="page-wrapper">
             
@@ -8,7 +9,7 @@
               
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Report Dashboard</h4>
+                        <h3 class="text-themecolor">Report Dashboard</h3>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
@@ -86,24 +87,14 @@
                 </div>
                 
                 <?php
-   include ('sidebar.php');
+   include ('../sidebar.php');
 
              ?>
             </div>
         </div>
     </div>
-    <style>
-	img#cimg{
-		max-height: 15vh;
-		/*max-width: 6vw;*/
-	}
-</style>
-
 
 <?php
-if(isset($_SESSION['mgs'])){
-    unset($_SESSION['mgs']);
-}
    include ('scripts.php');
    include ('footer.php');
 

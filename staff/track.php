@@ -1,19 +1,6 @@
 <?php
-
-// session_start();
-include 'config.php';
-
-?>
-<?php
-// session_start();
   include ('header.php');
   include ('navbar.php');
-  include ('ajax.php');
-
- 
-?>
- <?php
-include('manage-account.php');
 ?>
 <div class="page-wrapper">
 
@@ -27,100 +14,82 @@ include('manage-account.php');
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-                            <div class="card-footer border-top border-info">
+                            <div class=" border-top border-info">
                                 <!-- <h4 class="card-title"> Account Profile</h4> -->
-                                <div class="col-lg-12">
-	<div class="card card-outline card-primary">
-		<div class="card-body">
-			
-        <div class="d-flex w-100 px-1 py-2         justify-content-center align-items-center">
-				<label for="">Enter Tracking Number</label>
-				<div class="input-group col-sm-5">
-                    <input type="search" id="ref_no" class="form-control form-control-sm" placeholder="Type the tracking number here">
-                    <div class="input-group-append">
-                        <button type="button" id="track-btn" class="btn btn-sm btn-info btn-gradient-info">
-                            <i class="ti-search"> </i>
-                        </button>
+                             <div class="col-lg-12">
+                                <div class="card card-primary">
+                                    <div class="card-body">
+                                        
+                                    <div class="d-flex w-100 px-1 py-2 justify-content-center align-items-center">
+                                            <label for="">Enter Tracking Number</label>
+                                            <div class="input-group col-sm-5">
+                                                <form action="" method="GET" class="d-flex ml-2">
+                                                <input type="search" class="form-control form-control-sm px-5" name="reference_number" value="<?php echo isset($_GET['reference_number'])? $_GET['reference_number'] : '' ?> "/>
+                                                <div class="input-group-append">
+                                                    <button type="submit" name="search"  class="btn btn-sm btn-info btn-gradient-info">
+                                                        <i class="ti-search"> </i>
+                                                    </button>
+                                                </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div> 
+                     </div>
+                 </div>
+                 <div class="card">
+                    <?php
+                        if(isset($_GET['search'])){
+                            $reference_number = $_GET['reference_number'];
+                            $sql = $conn->query("SELECT * FROM goods WHERE reference_number='$reference_number' ");
+                            if($sql->num_rows>0){
+                                while($row=$sql->fetch_assoc()){
+                    ?>
+                    <div class="card-body">
+                    <input type="hidden" name="reference_number" value="<?php echo $row['reference_number'];?>">
+                    <ul class="timeline">
+                                    <li>
+                                        <div class="timeline-badge info">
+                                            <i class="fa fa-save"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title"><?php echo $row['goods_default'];?></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <hr />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="timeline-inverted">
+                                        <div class="timeline-badge success">
+                                            <i class="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-panel">
+                                            <div class="timeline-heading">
+                                                <h4 class="timeline-title"><?php echo $row['type'];?></h4>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <hr />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                     </div>
+                    <?php }
+                     }}else{ ?>
+                        <!-- <h4 class="text-danger text-bold">No result found</h4> -->
+                    <?php }?>    
                 </div>
-			</div>
-			
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-8 offset-md-2">
-			<div class="timeline" id="parcel_history">
-           
-			</div>
-		</div>
-	</div>
-</div>
-<div id="clone_timeline-item" class="d-none" name="track">
-	<div class="iitem">
-	    <i class="fas fa-box bg-blue"></i>
-	    <div class="timeline-item">
-	      <span class="time"><i class="fas fa-clock"></i> <span class="dtime">12:05</span></span>
-	      <div class="timeline-body">
-	      	asdasd 
-	      </div>
-	    </div>
-	  </div>
-</div>  
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-     </div>
 </div>
-</div>
- <script>
-//    function track_now(){
-// 		start_load()
-// 		var tracking_num = $('#ref_no').val()
-// 		if(tracking_num == ''){
-// 			$('#parcel_history').html('')
-// 			end_load()
-// 		}else{
-// 			$.ajax({
-// 				url:'ajax.php?action=get_parcel_heistory',
-// 				method:'POST',
-// 				data:{ref_no:tracking_num},
-// 				error:err=>{
-// 					console.log(err)
-// 					alert_toast("An error occured",'error')
-// 					end_load()
-// 				},
-// 				success:function(resp){
-// 					if(typeof resp === 'object' || Array.isArray(resp) || typeof JSON.parse(resp) === 'object'){
-// 						resp = JSON.parse(resp)
-// 						if(Object.keys(resp).length > 0){
-// 							$('#parcel_history').html('')
-// 							Object.keys(resp).map(function(k){
-// 								var tl = $('#clone_timeline-item .iitem').clone()
-// 								tl.find('.dtime').text(resp[k].date_created)
-// 								tl.find('.timeline-body').text(resp[k].status)
-// 								$('#parcel_history').append(tl)
-// 							})
-// 						}
-// 					}else if(resp == 2){
-// 						alert_toast('Unkown Tracking Number.',"error")
-// 					}
-// 				}
-// 				,complete:function(){
-// 					end_load()
-// 				}
-// 			})
-// 		}
-// 	}
-// 	$('#track-btn').click(function(){
-// 		track_now()
-// 	})
-// 	$('#ref_no').on('search',function(){
-// 		track_now()
-// 	})
- </script>
-<?php
-  include ('sidebar.php');
+ 
+<?php 
+  include ('../sidebar.php');
   include ('scripts.php');
   include ('footer.php');
 ?>

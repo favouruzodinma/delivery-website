@@ -27,6 +27,7 @@ if($_SESSION['login']!=true){
     <!-- Dashboard 1 Page CSS -->
     <link href="../dist/css/pages/dashboard4.css" rel="stylesheet">
     <link href="../assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
     <link href="../assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
     <link href="../assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />

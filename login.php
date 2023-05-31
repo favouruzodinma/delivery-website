@@ -12,7 +12,7 @@ include 'config.php';
      if($sql->num_rows>0){
         $row = $sql->fetch_assoc ();
         $_SESSION['email'] = $row['email'];
-        $_SESSION['branch_id'] = $row['branch_id'];
+        $_SESSION['userid'] = $row['userid'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['success']=true;
         header('location:dashboard.php');

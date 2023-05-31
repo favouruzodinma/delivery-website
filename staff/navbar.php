@@ -1,17 +1,4 @@
-
-    
- <?php
-  $email = $_SESSION['email'];
-   
-
-   $sql = $conn->query("SELECT * FROM admin WHERE email='$email'  ");
-   if($sql->num_rows>0){
-
- $row = $sql->fetch_assoc();
-}
-
-?>        
-<header class="topbar">
+      <header class="topbar">
     
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
               
@@ -51,84 +38,25 @@
         <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
-                <!-- User Profile-->
-                <div class="user-profile">
-                    <div class="user-pro-body">                   
-                        <div class="dropdown">
-                     
-                        <div>
-                            <img src="<?php echo $row['user_img'] ?>" alt="Profile-img" class="img-circle">
-                       
-                        </div>
-      
-                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                aria-expanded="false"> <?php echo $row['flname'] ?>
-                                <span class="caret"></span>
-                            </a>
-                            
-                            <div class="dropdown-menu animated flipInY">
-                                <!-- text-->
-                                <a href="../profile.php" class="dropdown-item">
-                                    <i class="ti-user"></i> My Profile</a>
-                                <!-- text-->
-                                <!-- text-->
-                                <div class="dropdown-divider"></div>
-                                <!-- text-->
-                                <a href="#" class="dropdown-item">
-                                    <i class="ti-settings"></i> Manage Account</a>
-                                <!-- text-->
-                                <div class="dropdown-divider"></div>
-                                <!-- text-->
-                                <a href="../change-password.php" class="dropdown-item">
-                                    <i class="ti-lock"></i> Change Password</a>
-                                <!-- text-->
-                                <div class="dropdown-divider"></div>
-                                <!-- text-->
-                                <a href="logout.php" class="dropdown-item">
-                                    <i class="fa fa-power-off"></i> Logout</a>
-                                <!-- text-->
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <a href="dashboard.php"><li class="nav-small-cap">_____DASHBOARD___</li></a>
-                        <li>
-                            <a class=" waves-effect waves-dark" href="manage-branch.php" >
-                                <i class="icon-home"></i>
-                                <span class="hide-menu">Manage Branch
-                                    <span class="badge badge-pill badge-cyan ml-auto">2</span>
-                                </span>
+                    <li>
+                            <a class=" waves-effect waves-dark" href="../home/index.php" >
+                                <i class="ti-home"></i>
+                                <span class="hide-menu">Home </span>
                             </a>
                         </li>
-                        
                         <li>
-                            <a class=" waves-effect waves-dark" href="manage-staff.php" >
-                                <i class="ti-user"></i>
-                                <span class="hide-menu">Manage Staffs
-                                <span class="badge badge-pill badge-cyan ml-auto">2</span>
-
-                                </span>
+                            <a class=" waves-effect waves-dark" href="dashboard.php" >
+                                <i class="icon-"></i>
+                                <span class="hide-menu">Dashboard </span>
                             </a>
                         </li>
-                       
                         <li>
-                            <a class=" waves-effect waves-dark" href="manage-vehicle.php" >
-                                <i class="ti-truck"></i>
-                                <span class="hide-menu">Manage Vehicle
-                                <span class="badge badge-pill badge-cyan ml-auto">2</span>
-                                </span>
-                            </a>
-                        </li>
-                       
-                        <li>
-                            <a class="waves-effect waves-dark" href="manage-user.php" aria-expanded="false">
-                            <i class="ti-user"></i>
-                                <span class="hide-menu">Manage Users</span>
-                                <span class="badge badge-pill badge-cyan ml-auto">1</span>
+                            <a class="waves-effect waves-dark" href="profile.php" aria-expanded="false">
+                            <i class="ti-settings"></i>
+                                <span class="hide-menu">Manage account</span>
                             </a>
                         </li>
                         <li>
@@ -171,18 +99,23 @@
                         <li class="nav-small-cap">_____SUPPORT_____</li>
                         
                         <li>
-                            <a class="waves-effect waves-dark" href="../track.php" aria-expanded="false">
+                            <a class="waves-effect waves-dark" href="track.php" aria-expanded="false">
                             <i class="ti-search"></i>
-                                <span class="hide-menu">TRACK GOODS</span>
+                                <span class="hide-menu">Track goods</span>
                             </a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-dark" href="../report.php" aria-expanded="false">
+                            <a class="waves-effect waves-dark" href="report.php" aria-expanded="false">
                                 <i class="ti-folder"></i>
-                                <span class="hide-menu">REPORTS</span>
+                                <span class="hide-menu">Report</span>
                             </a>
                         </li>
-                   
+                        <li>
+                            <a class="waves-effect waves-dark" href="logout.php" aria-expanded="false">
+                                <i class="ti-folder"></i>
+                                <span class="hide-menu">Logout</span>
+                            </a>
+                        </li>
 
                     </ul>
                   

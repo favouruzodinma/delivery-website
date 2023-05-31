@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>ElITE</title>
+  <title>Elite</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,14 +43,14 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
 
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+        <i class="bi bi-phone d-flex align-items-center"><span>+234704 139 0038</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 8AM - 5PM</span></i>
       </div>
 
       <div class="languages d-none d-md-flex align-items-center">
         <ul>
-          <li>En</li>
-          <li><a href="#">De</a></li>
+          <li><a href="../staff/login.php">staff</a></li>
+          <li><a href="../admin/login.php">admin</a></li>
         </ul>
       </div>
     </div>
@@ -60,7 +60,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">ELITEADMIN</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Elite delivery</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -104,7 +104,7 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>Eliteadmin</span></h1>
+          <h1>Welcome to <span>Elite delivery</span></h1>
           <h2>Delivering Our Clients Goods for more than 18 years!</h2>
 
           <div class="btns">
@@ -432,7 +432,7 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
+    <!-- <section id="gallery" class="gallery">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title">
@@ -512,10 +512,11 @@
         </div>
 
       </div>
-    </section><!-- End Gallery Section -->
+    </section> -->
+    <!-- End Gallery Section -->
 
     <!-- ======= Chefs Section ======= -->
-    <section id="chefs" class="chefs">
+    <!-- <section id="chefs" class="chefs">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -582,7 +583,8 @@
         </div>
 
       </div>
-    </section><!-- End Chefs Section -->
+    </section> -->
+    <!-- End Chefs Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -593,11 +595,6 @@
           <p>Contact Us</p>
         </div>
       </div>
-
-      <div data-aos="fade-up">
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div>
-
       <div class="container" data-aos="fade-up">
 
         <div class="row mt-5">
@@ -607,7 +604,7 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Suite 15/16 Emmanuel Plaza Eliozu</p>
               </div>
 
               <div class="open-hours">
@@ -615,20 +612,20 @@
                 <h4>Open Hours:</h4>
                 <p>
                   Monday-Saturday:<br>
-                  11:00 AM - 2300 PM
+                  8:00 AM - 5:00 PM
                 </p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>admin@elitedelivery.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+234704 139 0038</p>
               </div>
 
             </div>
@@ -637,10 +634,10 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="#" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -677,12 +674,12 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Restaurantly</h3>
+              <h3>Elite Delivery</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Suite 15/16 Emmanuel Plaza <br>
+                Eliozu ph, Nigeria<br><br>
+                <strong>Phone:</strong> +234704 139 0038<br>
+                <strong>Email:</strong> admin@elitedelivery.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -700,8 +697,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
 
@@ -731,14 +728,10 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Restaurantly</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Elitedelivery</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://wa.me/+2347041390038">Zubetech.com</a>
       </div>
     </div>
   </footer><!-- End Footer -->
