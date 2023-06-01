@@ -1,6 +1,7 @@
 <?php
   include ('header.php');
   include ('navbar.php');
+
   if(isset($_GET['id'])){
   $id= $_GET['id'];
   if($_GET['status']=='delete'){
@@ -65,28 +66,28 @@
                                                         <td><?php 
                                 switch ($row['type']) {
                                   
-                                  case 'shipped':
+                                  case 'Shipped':
                                     echo "<span class='badge badge-pill badge-info'> Shipped</span>";
                                     break;
-                                  case 'in_transit':
+                                  case 'In transit':
                                     echo "<span class='badge badge-pill badge-primary'> In-Transit</span>";
                                     break;
-                                  case 'arrived_at_destination':
+                                  case 'Arrived at destination':
                                     echo "<span class='badge badge-pill badge-primary'> Arrived At Destination</span>";
                                     break;
-                                  case 'out_for_delivery':
+                                  case 'Out for delivery':
                                     echo "<span class='badge badge-pill badge-primary'> Out for Delivery</span>";
                                     break;
-                                  case 'ready_to_pick_up':
+                                  case 'Ready to pickup':
                                     echo "<span class='badge badge-pill badge-primary'> Ready to Pickup</span>";
                                     break;
-                                  case 'delivered':
+                                  case 'Delivered':
                                     echo "<span class='badge badge-pill badge-success'>Delivered</span>";
                                     break;
-                                  case 'picked_up':
-                                    echo "<span class='badge badge-pill badge-success'> Picked-up</span>";
+                                  case 'Picked up':
+                                    echo "<span class='badge badge-pill badge-success'> Picked up</span>";
                                     break;
-                                  case 'unsuccessfull_delivery':
+                                  case 'Unsuccessfull delivery':
                                     echo "<span class='badge badge-pill badge-danger'> Unsuccessfull Delivery Attempt</span>";
                                     break;
                                   
@@ -211,31 +212,31 @@
 						<dd>
 							<?php 
 							switch ($row['type']) {
-								case 'in_transit':
-									echo "<span class='badge badge-pill badge-info'> In-transit</span>";
+								case 'In transit':
+									echo "<span class='badge badge-pill badge-info'> In transit</span>";
 									break;
-								case 'shipped':
+								case 'Shipped':
 									echo "<span class='badge badge-pill badge-info'> Shipped</span>";
 									break;
-								case 'arrived_at_destination':
-									echo "<span class='badge badge-pill badge-primary'> arrived_at_destination</span>";
+								case 'Arrived at destination':
+									echo "<span class='badge badge-pill badge-primary'> Arrived at destination</span>";
 									break;
-								case 'out_for_delivery':
+								case 'Out for delivery':
 									echo "<span class='badge badge-pill badge-primary'> Out for delivery</span>";
 									break;
-								case 'ready_to_pick_up':
+								case 'Ready to pickup':
 									echo "<span class='badge badge-pill badge-primary'> Ready to pickup</span>";
 									break;
-								case 'delivered':
+								case 'Delivered':
 									echo "<span class='badge badge-pill badge-primary'> Delivered </span>";
 									break;
-								case 'picked_up':
-									echo "<span class='badge badge-pill badge-success'>Picked-Up</span>";
+								case 'Picked up':
+									echo "<span class='badge badge-pill badge-success'>Picked Up</span>";
 									break;
 								// case '':
 								// 	echo "<span class='badge badge-pill badge-success'> Picked-up</span>";
 								// 	break;
-								case 'unsuccessfull_delivery':
+								case 'Unsuccessfull delivery':
 									echo "<span class='badge badge-pill badge-danger'> Unsuccessfull Delivery Attempt</span>";
 									break;
 								
@@ -276,7 +277,7 @@
       </div>
       <div class="modal-body">
       <div class="form-group">
-            
+            <form action="update.php" Method="POST">
             <!-- <label for="" class="control-label"></label> -->
             <select class="form-control" id="exampleFormControlSelect1" name="type">
                <option></option>
@@ -287,16 +288,18 @@
                <option <?php echo "Out for delivery"==$row['type']?"selected":''?> value="Out for delivery">Out for delivery</option>
                <option <?php echo "Ready to pickup "==$row['type']?"selected":''?> value="Ready to pickup">Ready to pickup</option>
                <option  <?php echo "Delivered "==$row['type']?"selected":''?> value="Delivered">Delivered</option>
-               <option <?php echo "Picked up "==$row['type']?"selected":''?> value="Picked up">Picked up</option>
+               <option <?php echo "Picked up"==$row['type']?"selected":''?> value="Picked up">Picked up</option>
                <option <?php echo "Unsuccessfull delivery"==$row['type']?"selected":''?>                                    
                 value="Unsuccessfull delivery">Unsuccessfull delivery</option>
              </select>
-    </div>
+             <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" name="updatebtn">Update</button>
+            </div>
+            </form>
+       </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" name="updatebtn">Update</button>
-      </div>
+      
     </div>
   </div>
 </div>

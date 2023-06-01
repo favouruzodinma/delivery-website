@@ -15,6 +15,8 @@
     <!-- This page CSS -->
     <!-- This page CSS -->
     <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <link href="../dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+
     
   <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- Custom CSS -->

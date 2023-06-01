@@ -112,9 +112,6 @@
                                     <a href="manage-goods.php?status=Picked up">Picked Up</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=Delivered">Delivered</a>
-                                </li>
-                                <li>
                                     <a href="manage-goods.php?status=Unsuccessfull delivery">Unsuccessfull Delivery Attempt</a>
                                 </li>
                               

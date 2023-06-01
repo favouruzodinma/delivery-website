@@ -42,10 +42,10 @@
                  <div class="card">
                     <?php
                         if(isset($_GET['search'])){
-                            $reference_number = $_GET['reference_number'];
-                            $sql = $conn->query("SELECT * FROM goods WHERE reference_number='$reference_number' ");
-                            if($sql->num_rows>0){
-                                while($row=$sql->fetch_assoc()){
+                        $reference_number = $_GET['reference_number'];
+                        $sql = $conn->query("SELECT * FROM goods WHERE reference_number='$reference_number' ");
+                        if($sql->num_rows>0){
+                        while($row=$sql->fetch_assoc()){
                     ?>
                     <div class="card-body">
                     <input type="hidden" name="reference_number" value="<?php echo $row['reference_number'];?>">

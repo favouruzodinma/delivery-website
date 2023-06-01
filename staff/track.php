@@ -77,7 +77,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                    </div>
+                    </div>  
                     <?php }
                      }}else{ ?>
                         <!-- <h4 class="text-danger text-bold">No result found</h4> -->

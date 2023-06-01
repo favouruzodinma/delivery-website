@@ -116,6 +116,17 @@ if(isset($_POST['Update-staff'])){
     header("location: manage-staff.php");
 }   
 }else{
+    if(isset($_POST['updatebtn'])){
+        $reference_number = cleaninput($_POST['reference_number']);
+        
+        $sql= $conn->query("UPDATE  goods SET  type = '$type' WHERE reference_number='$reference_number'  ");
+        
+        
+        header('location:manage-goods.php');
+    }else{
+
+
+    }        
 
 }
 }

@@ -18,6 +18,8 @@
     
   <link rel="stylesheet" href="./../maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- Custom CSS -->
+    <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard4.css" rel="stylesheet">

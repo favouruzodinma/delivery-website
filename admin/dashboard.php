@@ -178,10 +178,10 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-note"></i></h3>
-                                            <p><a href="manage-goods.php?status=in_transit" class="text-muted">In transit</a></p>
+                                            <p><a href="manage-goods.php?status=In transit" class="text-muted">In transit</a></p>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="counter text-cyan"><?php echo $conn->query("SELECT * FROM goods where type = 'in_transit'") ->num_rows; ?></h2>
+                                            <h2 class="counter text-cyan"><?php echo $conn->query("SELECT * FROM goods where type = 'In transit'") ->num_rows; ?></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -202,10 +202,10 @@
                                     <div class="d-flex no-block align-items-center">
                                         <div>
                                             <h3><i class="icon-doc"></i></h3>
-                                            <p ><a href="manage-goods.php?status=delivered" class="text-muted">Delivered</a></p>
+                                            <p ><a href="manage-goods.php?status=Picked up" class="text-muted">Picked Up</a></p>
                                         </div>
                                         <div class="ml-auto">
-                                            <h2 class="counter text-purple"><?php echo $conn->query("SELECT * FROM goods where type = 'delivered'") ->num_rows; ?></h2>
+                                            <h2 class="counter text-purple"><?php echo $conn->query("SELECT * FROM goods where type = 'Picked up'") ->num_rows; ?></h2>
                                         </div>
                                     </div>
                                 </div>
