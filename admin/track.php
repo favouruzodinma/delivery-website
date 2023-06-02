@@ -24,7 +24,7 @@
                                             <label for="">Enter Tracking Number</label>
                                             <div class="input-group col-sm-5">
                                                 <form action="" method="GET" class="d-flex ml-2">
-                                                <input type="search" class="form-control form-control-sm px-5" name="reference_number" value="<?php echo isset($_GET['reference_number'])? $_GET['reference_number'] : '' ?> "/>
+                                                <input type="search" class="form-control form-control-sm px-5" name="reference_number" value="<?php echo isset($_GET['reference_number'])? $_GET['reference_number'] : '' ?>">
                                                 <div class="input-group-append">
                                                     <button type="submit" name="search"  class="btn btn-sm btn-info btn-gradient-info">
                                                         <i class="ti-search"> </i>
@@ -79,9 +79,14 @@
                                 </ul>
                     </div>
                     <?php }
-                     }}else{ ?>
-                        <!-- <h4 class="text-danger text-bold">No result found</h4> -->
-                    <?php }?>    
+                     }else{ ?>
+                         <?php 
+                        $sql = $conn->query("SELECT * FROM goods WHERE reference_number !='$reference_number' ");
+                        if($sql->num_rows>0){
+                        $row=$sql->fetch_assoc(); ?>
+                        <h4 class="text-danger text-center">No result found</h4>
+                         <?php } ?>
+                    <?php }}?>    
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
                    $status= $_GET['status']; 
                    $sql = $conn->query("SELECT * FROM goods WHERE type ='$status' order by  id desc");
                 }else{
-                  $sql = $conn->query("SELECT * FROM goods  order by  id desc");
+                  $sql = $conn->query("SELECT * FROM goods  order by  id asc");
 
                 }
 
@@ -97,7 +97,7 @@
                                             ?></td>
                                             <?php //include ('view-goods.php'); ?>
                                                         <td>   
-                                                        <a href="edit-goods.php?id=<?=  $row['id']; ?>&status=update" class="btn btn-info btn-flat " >Edit</a>
+                                                        <a href="edit-goods.php?id=<?=  $row['reference_number']; ?>&status=update" class="btn btn-info btn-flat " >Edit</a>
                                                         <a href="javascript:void(0)" class="btn btn-primary btn-flat "data-toggle="modal" data-target="#veiwgood<?php echo $row['id']?>">
 		                                                   view
 		                                                 </a>
@@ -233,17 +233,9 @@
 								case 'Picked up':
 									echo "<span class='badge badge-pill badge-success'>Picked Up</span>";
 									break;
-								// case '':
-								// 	echo "<span class='badge badge-pill badge-success'> Picked-up</span>";
-								// 	break;
 								case 'Unsuccessfull delivery':
 									echo "<span class='badge badge-pill badge-danger'> Unsuccessfull Delivery Attempt</span>";
 									break;
-								
-							// 	default:
-							// 		echo "<span class='badge badge-pill badge-info'> Item Accepted by Courier</span>";
-									
-							// 		break;
 							 }
 
 							?>

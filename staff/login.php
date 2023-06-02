@@ -15,9 +15,19 @@ include '../config.php';
         $_SESSION['branch_id'] = $row['branch_id'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['success']=true;
-        header('location:dashboard.php');
+        if($row['status']=="pending"){
+            $_SESSION['msgg']='
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Your Account Has been Unverified!!</strong> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>';
+        }else{
+            header('location:dashboard.php');
+        }
     }else{
-      $_SESSION['mgs'] = '
+      $_SESSION['msgg']='
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
       <strong>Invalid Email or Password submitted!!</strong> 
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -53,13 +63,12 @@ include '../config.php';
     
     <section id="wrapper">
         <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
+       <h4 class="text-center"><a href="../login.php">User login</a> || <a href="../admin/login.php">Admin login</a> </h4>
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="#" method="POST">
                         <h3 class="text-center m-b-20">Sign In</h3>
-                        <?php echo isset($_SESSION['mgs'])?$_SESSION['mgs']:""?>
-                        
-
+                        <?php echo isset($_SESSION['msgg'])? $_SESSION['msgg'] : " "?>
                         <div class="form-group ">
                             <div class="col-xs-12">
                                 <input class="form-control" type="text" required="" placeholder="Email" name="email"> </div>
@@ -92,8 +101,8 @@ include '../config.php';
         </div>
     </section>
     <?php
-    if(isset($_SESSION['mgs'])){
-        unset($_SESSION['mgs']);
+    if(isset($_SESSION['msgg'])){
+        unset($_SESSION['msgg']);
     }
     ?>
   <?php

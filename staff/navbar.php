@@ -49,8 +49,9 @@
                         </li>
                         <li>
                             <a class=" waves-effect waves-dark" href="dashboard.php" >
-                                <i class="icon-"></i>
-                                <span class="hide-menu">Dashboard </span>
+                            <i class="icon-speedometer"></i>
+                                <span class="hide-menu">Dashboard
+                                </span>
                             </a>
                         </li>
                         <li>
@@ -62,35 +63,32 @@
                         <li>
                             <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                                 <i class="ti-gift"></i>
-                                <span class="hide-menu">GOODS & SERVICES</span>
+                                <span class="hide-menu">Goods & services</span>
                             </a>
                             <ul aria-expanded="false" class="collapse">
                                 <li>
-                                    <a href="manage-goods.php">Goods list</a>
+                                    <a href="manage-goods.php">Manage Goods</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=shipped">Shipped</a>
+                                    <a href="manage-goods.php?status=Shipped">Shipped</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=in_transit">In-transit</a>
+                                    <a href="manage-goods.php?status=In transit">In-transit</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=out_for_delivery">Out For Delivery</a>
+                                    <a href="manage-goods.php?status=Out for delivery">Out For Delivery</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=arrived_at_destination">Arrived at Destination</a>
+                                    <a href="manage-goods.php?status=Arrived at destination">Arrived at Destination</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=ready_to_pick_up">Ready For PickUp</a>
+                                    <a href="manage-goods.php?status=Ready to pickup">Ready For PickUp</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=picked_up">Picked Up</a>
+                                    <a href="manage-goods.php?status=Picked up">Picked Up</a>
                                 </li>
                                 <li>
-                                    <a href="manage-goods.php?status=delivered">Delivered</a>
-                                </li>
-                                <li>
-                                    <a href="manage-goods.php?status=unsuccessfull_delivery">Unsuccessfull Delivery Attempt</a>
+                                    <a href="manage-goods.php?status=Unsuccessfull delivery">Unsuccessfull Delivery Attempt</a>
                                 </li>
                               
                             </ul>

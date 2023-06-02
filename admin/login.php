@@ -53,6 +53,7 @@ include '../config.php';
     
     <section id="wrapper">
         <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
+        <h4 class="text-center"><a href="../login.php">User login</a> || <a href="../staff/login.php">Staff login</a></h4>
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="#" method="POST">

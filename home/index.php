@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include_once('../config.php') ?>
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -94,7 +94,13 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      <?php
+       if(isset($_SESSION['login'])) {
+      ?>
+      <a href="../logout.php" class="book-a-table-btn scrollto  d-lg-flex">Logout</a>
+        <?php }else{ ?>
       <a href="../login.php" class="book-a-table-btn scrollto  d-lg-flex">Login</a>
+        <?php } ?>
 
     </div>
   </header><!-- End Header -->

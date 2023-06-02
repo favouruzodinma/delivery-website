@@ -43,6 +43,13 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                     <li>
+                            <a class=" waves-effect waves-dark" href="../home/index.php" >
+                            <i class="icon-home"></i>
+                                <span class="hide-menu">Home
+                                </span>
+                            </a>
+                        </li>
+                    <li>
                             <a class=" waves-effect waves-dark" href="dashboard.php" >
                             <i class="icon-speedometer"></i>
                                 <span class="hide-menu">Dashboard

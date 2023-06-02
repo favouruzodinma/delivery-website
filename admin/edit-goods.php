@@ -21,13 +21,14 @@
                                     </a>
                                 </div>
                                 <?php
-                                     $reference_number=$_SESSION['reference_number'];
-                                     $sql = $conn->query("SELECT * FROM goods WHERE reference_number='$reference_number'");
+                                    //  $reference_number = $_SESSION['reference_number'];
+                                     $sql = $conn->query("SELECT * FROM goods ");
                                      if($sql->num_rows>0){
-                                     while($row=$sql->fetch_assoc()) { 
+                                    while($row=$sql->fetch_assoc()){
                                 ?>
                                 <hr class="card-footer border-top border-info">
                                 <form action="update.php" method="POST">
+                                    <input type="hikdden" name="reference_number" value="<?php echo $row['reference_number']?>">
                                   <div class="row">
                                     <div class="col-md-6">
                                         <b>Sender Information</b>
@@ -178,7 +179,7 @@
                                 </div>
                               </div>
                          </form>
-                        <?php }} ?>
+                        <?php }}?>
                             </div>
                         </div>
                     </div>

@@ -21,9 +21,7 @@
                 </div>
                 
                 <?php 
-           
-               $sql = $conn->query("SELECT * FROM staffs where type = 0  ");
-          
+               $sql = $conn->query("SELECT * FROM staffs");
                 ?> 
                         <!-- table responsive -->
                         <div class="card">
@@ -75,8 +73,8 @@
                                                         
                                              <td>                                                       
                             <?php if($row['status']=='pending'){?>
-                            <a href= "manage-staff.php?id=<?php echo
-                            $row['branch_id']; ?>&status= admin=1, staff=2 " class="btn btn-info btn-sm my-2">Verify</a>
+                            <a href= "controller.php?verify&id=<?php echo
+                            $row['branch_id']; ?>&status=pending" class="btn btn-info btn-sm my-2">Verify</a>
                             <?php }else{ ?>
                             <a href="#" class="btn btn-success btn-sm">Verified</a>
                             <?php } ?>

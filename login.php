@@ -15,7 +15,17 @@ include 'config.php';
         $_SESSION['userid'] = $row['userid'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['success']=true;
-        header('location:dashboard.php');
+        if($row['status']=="ban"){
+            $_SESSION['msgg']='
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Your Account Has been Unverified!!</strong> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>';
+        }else{
+            header('location:dashboard.php');
+        }
     }else{
       $_SESSION['mgs'] = '
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -53,6 +63,7 @@ include 'config.php';
     
     <section id="wrapper">
         <div class="login-register" style="background-image:url(../assets/images/background/login-register.jpg);">
+        <h4 class="text-center"><a href="./staff/login.php">Staff login</a> || <a href="./admin/login.php">Admin login</a></h4>
             <div class="login-box card">
                 <div class="card-body">
                     <form class="form-horizontal form-material" id="loginform" action="#" method="POST">

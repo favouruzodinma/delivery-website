@@ -191,9 +191,7 @@ $length = cleaninput($_POST['length']);
 $price = cleaninput($_POST['price']);
 $reference_number = date("dhs").rand(203994 , 485789);
 
-$id = $_SESSION['id'];
 $_SESSION['reference_number'] = $row['reference_number'];
-
 
 $sql= $conn->query("INSERT INTO goods SET reference_number= '$reference_number', sender_flname= '$sender_flname',
 sender_address= '$sender_address', sender_contact= '$sender_contact', recipient_flname= '$recipient_flname', recipient_address= '$recipient_address' ,recipient_contact= '$recipient_contact', type= '$type', from_branch_id= '$from_branch_id', to_branch_id= '$to_branch_id', weight= '$weight', height= '$height', width= '$width', length= '$length', price= '$price' ");
